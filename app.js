@@ -27,6 +27,7 @@ function imgclick(userpic) {
     // images3.style.display = "none"
     // images4.style.display = ""
     // images.src = "images/card2.gif"
+    //   for(var i=0;i<1;i++){
     if (funcBond) {
         var random = Math.ceil(Math.random() * 3)
         // var random1 = Math.ceil(Math.random() * 3)
@@ -34,13 +35,14 @@ function imgclick(userpic) {
         totals.push("cyclecomplete")
         console.log(random)
         restartfunc = "restrt"
+        // for (var i = 1; i <= 1; i++) {
         if (random === 1 && userpic === "card1") {
             images.src = "images/ace.png"
             // images2.src = "images/king.jpg"
             // images3.src = "images/queeen.jpg"
         }
         else if (random === 2 && userpic === "card2") {
-            images2.src ="images/ace.png"
+            images2.src = "images/ace.png"
             // images3.src = "images/king.jpg"
             // images.src = "images/queeen.jpg"
 
@@ -62,7 +64,7 @@ function imgclick(userpic) {
         }
         else if (random === 3 && userpic === "card1") {
             // images3.src = "images/ace.webp"
-            images.src ="images/king.jpg"
+            images.src = "images/king.jpg"
             // images2.src = "images/queeen.jpg"
         }
         else if (random === 1 || userpic === "card3") {
@@ -73,7 +75,7 @@ function imgclick(userpic) {
         else if (random === 2 || userpic === "card1") {
             // images3.src = "images/ace.webp"
             // images.src = "images/king.jpg"
-            images.src ="images/queeen.jpg"
+            images.src = "images/queeen.jpg"
         }
         else if (random === 3 || userpic === "card2") {
             // images3.src = "images/ace.webp"
@@ -104,6 +106,9 @@ function imgclick(userpic) {
 
         // btn.innerHTML = "ReStart"
         // message.innerHTML = ""
+        // break   ;
+        // restartfunc =undefined
+
     }
     else {
         undefined
@@ -113,6 +118,11 @@ function imgclick(userpic) {
     // btn.onclick = restart()
     //         message.innerHTML = "Restart For Another Round"
     //     }
+    // break   ;
+    //   }
+    funcBond = undefined
+    // restartfunc =undefined
+
 }
 function start() {
     message.innerHTML = "Chose Ace From The Card"
@@ -125,13 +135,25 @@ function start() {
         images.src = "images/back.jpg"
         images2.src = "images/back.jpg"
         images3.src = "images/back.jpg"
+        // funcBond = undefined
+
     }
-    // if (btn.innerHTML === "ReStart") {
+    if (btn.innerHTML === "ReStart") {
+        btn.innerHTML = "Start"
+        message.innerHTML = "Try To Pic Ace This Time"
+        // funcBond = "start"
+        // funcBond = undefined
+
+
+    }
+    // if (btn.innerHTML === "Start") {
+    //     funcBond = "restart"
+        // if (btn.innerHTML === "ReStart") {
         // images.src = "images/back.png"
         // images2.src = "images/back.png"
         // images3.src = "images/back.png"
+        // }
     // }
-}
 // imgclick(function(){})
 
 // function restart() {
@@ -142,4 +164,4 @@ function start() {
 //     images.src = "images/back.jpg"
 //     images2.src = "images/back.jpg"
 //     images3.src = "images/back.jpg"
-// }
+}
